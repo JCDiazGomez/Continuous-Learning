@@ -1,0 +1,11 @@
+# _config.yml
+title: My Continuous Learning Journey
+description: Tracking my courses, certifications, and projects in tech, cloud, cybersecurity, and software development.
+theme: jekyll-theme-merlot
+author: Juan Carlos Diaz
+baseurl: ""  # leave empty if using root domain
+url: "https://jcdiazgomez.github.io/Continuous-Learning/"  
+
+# Optional settings
+markdown: kramdown
+highlighter: rouge
