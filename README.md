@@ -7,3 +7,4 @@
 | Clean Architecture in ASP.NET Core | Felipe Gavilán | Udemy | September 2025 | [View Certificate](https://www.udemy.com/certificate/UC-a090d962-6ddc-4295-b8de-54fc7d61cdf8/) |
 | [Machine Learning](https://maersk.digitalbadges-eu.skillsoft.com/f7322b81-75a7-4e01-bd10-e9c31e4fea16) | Maersk / Skillsoft | Digital Badge | August 2025 | [View Credential](https://maersk.digitalbadges-eu.skillsoft.com/f7322b81-75a7-4e01-bd10-e9c31e4fea16#acc.LH4bJ2Sx) |
 | Generative AI: Prompt Engineering Basics | IBM | Coursera | August 2025 | [Verify Certificate](https://www.coursera.org/account/accomplishments/verify/EHMVR3MWBL8J) |
+| Prompt Engineering for ChatGPT | Coursera | Coursera | June 27, 2025 | [Verify Certificate](https://www.coursera.org/account/accomplishments/verify/KAOUCZET42O7) |
