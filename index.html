@@ -7,48 +7,56 @@
   <style>
     /* Reset básico */
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f0f4f8; color: #333; line-height: 1.6; }
+    body { 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+      background: #1e1e2f;   /* Fondo oscuro */
+      color: #eee;            /* Texto claro */
+      line-height: 1.6; 
+    }
 
     /* Contenedor principal */
     .container { max-width: 1000px; margin: auto; padding: 40px 20px; }
 
     /* Encabezados */
-    h1 { font-size: 2.8em; color: #2c3e50; margin-bottom: 10px; }
-    h2 { font-size: 2em; color: #34495e; margin-top: 40px; margin-bottom: 20px; }
+    h1 { font-size: 2.8em; color: #f0f0f0; margin-bottom: 10px; }
+    h2 { font-size: 2em; color: #ddd; margin-top: 40px; margin-bottom: 20px; }
 
     /* Secciones de tarjetas */
     .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
 
     /* Tarjeta individual */
     .card {
-      background: #fff;
+      background: #2c3e50;    /* Tarjetas oscuras */
+      color: #f0f0f0;         /* Texto claro */
       border-radius: 12px;
       padding: 20px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
       transition: transform 0.3s, box-shadow 0.3s;
     }
     .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.5);
     }
 
     /* Títulos de tarjetas */
-    .card h3 { font-size: 1.4em; color: #2980b9; margin-bottom: 10px; }
+    .card h3 { font-size: 1.4em; color: #1abc9c; margin-bottom: 10px; }
     .card p { margin-bottom: 8px; }
     .card a { color: #e67e22; text-decoration: none; font-weight: bold; }
     .card a:hover { text-decoration: underline; }
 
     /* Footer / Contact */
-    footer { margin-top: 60px; text-align: center; font-size: 0.9em; color: #7f8c8d; }
-    footer a { color: #2980b9; text-decoration: none; }
+    footer { margin-top: 60px; text-align: center; font-size: 0.9em; color: #bbb; }
+    footer a { color: #1abc9c; text-decoration: none; }
     footer a:hover { text-decoration: underline; }
 
+    /* Ajuste de enlaces generales */
+    a { transition: color 0.2s; }
   </style>
 </head>
 <body>
 
   <div class="container">
-    <h1>🧠 Continuous Learning Portfolio</h1>
+    <h1>🛣️ Continuous Learning Portfolio</h1>
     <p>Tracking my continuous learning journey: certifications, courses, and professional development in technology, cloud, cybersecurity, and software development.</p>
 
     <h2>🎓 Courses Completed</h2>
