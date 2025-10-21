@@ -3,117 +3,142 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Continuous Learning</title>
+  <title>Continuous Learning Portfolio</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      background: #f5f5f5;
-      color: #333;
-      line-height: 1.6;
-    }
-    h1, h2 {
-      color: #2c3e50;
-    }
-    h1 { font-size: 2.5em; }
-    h2 { font-size: 2em; margin-top: 40px; }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
+    /* Reset básico */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f0f4f8; color: #333; line-height: 1.6; }
+
+    /* Contenedor principal */
+    .container { max-width: 1000px; margin: auto; padding: 40px 20px; }
+
+    /* Encabezados */
+    h1 { font-size: 2.8em; color: #2c3e50; margin-bottom: 10px; }
+    h2 { font-size: 2em; color: #34495e; margin-top: 40px; margin-bottom: 20px; }
+
+    /* Secciones de tarjetas */
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+
+    /* Tarjeta individual */
+    .card {
       background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
     }
-    th, td {
-      border: 1px solid #ccc;
-      padding: 10px;
-      text-align: left;
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
     }
-    th {
-      background: #2980b9;
-      color: white;
-    }
-    tr:nth-child(even) { background: #ecf0f1; }
-    a { color: #2980b9; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    ul { margin-left: 20px; }
+
+    /* Títulos de tarjetas */
+    .card h3 { font-size: 1.4em; color: #2980b9; margin-bottom: 10px; }
+    .card p { margin-bottom: 8px; }
+    .card a { color: #e67e22; text-decoration: none; font-weight: bold; }
+    .card a:hover { text-decoration: underline; }
+
+    /* Footer / Contact */
+    footer { margin-top: 60px; text-align: center; font-size: 0.9em; color: #7f8c8d; }
+    footer a { color: #2980b9; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
   </style>
 </head>
 <body>
 
-  <h1>🧠 Continuous Learning</h1>
-  <p>Public record of my continuous learning journey: certifications, courses, and professional development projects. Here I track all my progress in technology, cloud, cybersecurity, and software development.</p>
+  <div class="container">
+    <h1>🧠 Continuous Learning Portfolio</h1>
+    <p>Tracking my continuous learning journey: certifications, courses, and professional development projects in technology, cloud, cybersecurity, and software development.</p>
 
-  <h2>🎓 Courses Completed</h2>
-  <table>
-    <tr>
-      <th>Course</th>
-      <th>Instructor / Provider</th>
-      <th>Platform</th>
-      <th>Date Completed</th>
-      <th>Certificate</th>
-    </tr>
-    <tr>
-      <td>Online Cybersecurity and Privacy Course: VPN, Proxy, TOR</td>
-      <td>Santiago Hernández</td>
-      <td>Udemy</td>
-      <td>May 31, 2025</td>
-      <td><a href="https://www.udemy.com/certificate/UC-13c06416-4133-4720-be02-3fde83f8218a/">View Certificate</a></td>
-    </tr>
-    <tr>
-      <td>Git + GitHub</td>
-      <td>Fernando Herrera</td>
-      <td>Udemy</td>
-      <td>June 2025</td>
-      <td><a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-03fd1f06-8f02-4519-9a07-3968db52e368.pdf">View Certificate</a></td>
-    </tr>
-    <tr>
-      <td>Clean Architecture in ASP.NET Core</td>
-      <td>Felipe Gavilán</td>
-      <td>Udemy</td>
-      <td>September 2025</td>
-      <td><a href="https://www.udemy.com/certificate/UC-a090d962-6ddc-4295-b8de-54fc7d61cdf8/">View Certificate</a></td>
-    </tr>
-    <tr>
-      <td>Maersk Digital Badge: Security / Compliance / Skills</td>
-      <td>Maersk / Skillsoft</td>
-      <td>Digital Badge</td>
-      <td>August 2025</td>
-      <td><a href="https://maersk.digitalbadges-eu.skillsoft.com/f7322b81-75a7-4e01-bd10-e9c31e4fea16#acc.LH4bJ2Sx">View Credential</a></td>
-    </tr>
-    <tr>
-      <td>Generative AI: Prompt Engineering Basics</td>
-      <td>IBM</td>
-      <td>Coursera</td>
-      <td>August 2025</td>
-      <td><a href="https://www.coursera.org/account/accomplishments/verify/EHMVR3MWBL8J">Verify Certificate</a></td>
-    </tr>
-    <tr>
-      <td>Prompt Engineering for ChatGPT</td>
-      <td>Coursera</td>
-      <td>Coursera</td>
-      <td>June 27, 2025</td>
-      <td><a href="https://www.coursera.org/account/accomplishments/verify/KAOUCZET42O7">Verify Certificate</a></td>
-    </tr>
-  </table>
+    <h2>🎓 Courses Completed</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Online Cybersecurity and Privacy Course: VPN, Proxy, TOR</h3>
+        <p><strong>Instructor:</strong> Santiago Hernández</p>
+        <p><strong>Platform:</strong> Udemy</p>
+        <p><strong>Date:</strong> May 31, 2025</p>
+        <p><a href="https://www.udemy.com/certificate/UC-13c06416-4133-4720-be02-3fde83f8218a/" target="_blank">View Certificate</a></p>
+      </div>
 
-  <h2>💻 Projects</h2>
-  <ul>
-    <li><strong>SmartOrders API:</strong> Evolving API built with ASP.NET Core and Kafka, integrating AI agents (Claude/GPT) and cloud deployment.</li>
-    <li><strong>Mock Logistics API:</strong> Simulation of shipping and returns systems for practical learning.</li>
-  </ul>
+      <div class="card">
+        <h3>Git + GitHub</h3>
+        <p><strong>Instructor:</strong> Fernando Herrera</p>
+        <p><strong>Platform:</strong> Udemy</p>
+        <p><strong>Date:</strong> June 2025</p>
+        <p><a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-03fd1f06-8f02-4519-9a07-3968db52e368.pdf" target="_blank">View Certificate</a></p>
+      </div>
 
-  <h2>📅 Learning Roadmap</h2>
-  <ul>
-    <li><strong>Phase 1:</strong> Fundamentals & Cybersecurity – solid foundation in networking and security.</li>
-    <li><strong>Phase 2:</strong> ASP.NET Core – modern backend development with C#.</li>
-    <li><strong>Phase 3:</strong> Apache Kafka – Event Streaming & Microservices.</li>
-    <li><strong>Phase 4:</strong> AI integrations & Observability – building intelligent, traceable systems.</li>
-    <li><strong>Phase 5:</strong> Azure Deployment & Certifications – cloud skills and official certifications.</li>
-  </ul>
+      <div class="card">
+        <h3>Clean Architecture in ASP.NET Core</h3>
+        <p><strong>Instructor:</strong> Felipe Gavilán</p>
+        <p><strong>Platform:</strong> Udemy</p>
+        <p><strong>Date:</strong> September 2025</p>
+        <p><a href="https://www.udemy.com/certificate/UC-a090d962-6ddc-4295-b8de-54fc7d61cdf8/" target="_blank">View Certificate</a></p>
+      </div>
 
-  <h2>🌐 Contact</h2>
-  <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/tu-perfil">Juan Carlos Díaz</a><br>
-  <strong>GitHub:</strong> <a href="https://github.com/tuusuario">github.com/tuusuario</a></p>
+      <div class="card">
+        <h3>Maersk Digital Badge: Security / Compliance / Skills</h3>
+        <p><strong>Provider:</strong> Maersk / Skillsoft</p>
+        <p><strong>Date:</strong> August 2025</p>
+        <p><a href="https://maersk.digitalbadges-eu.skillsoft.com/f7322b81-75a7-4e01-bd10-e9c31e4fea16#acc.LH4bJ2Sx" target="_blank">View Credential</a></p>
+      </div>
+
+      <div class="card">
+        <h3>Generative AI: Prompt Engineering Basics</h3>
+        <p><strong>Provider:</strong> IBM / Coursera</p>
+        <p><strong>Date:</strong> August 2025</p>
+        <p><a href="https://www.coursera.org/account/accomplishments/verify/EHMVR3MWBL8J" target="_blank">Verify Certificate</a></p>
+      </div>
+
+      <div class="card">
+        <h3>Prompt Engineering for ChatGPT</h3>
+        <p><strong>Provider:</strong> Coursera</p>
+        <p><strong>Date:</strong> June 27, 2025</p>
+        <p><a href="https://www.coursera.org/account/accomplishments/verify/KAOUCZET42O7" target="_blank">Verify Certificate</a></p>
+      </div>
+    </div>
+
+    <h2>💻 Projects</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>SmartOrders API</h3>
+        <p>Evolving API built with ASP.NET Core and Kafka, integrating AI agents (Claude/GPT) and cloud deployment.</p>
+      </div>
+      <div class="card">
+        <h3>Mock Logistics API</h3>
+        <p>Simulation of shipping and returns systems for practical learning and experimentation with integrations.</p>
+      </div>
+    </div>
+
+    <h2>📅 Learning Roadmap</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Phase 1</h3>
+        <p>Fundamentals & Cybersecurity – solid foundation in networking and security.</p>
+      </div>
+      <div class="card">
+        <h3>Phase 2</h3>
+        <p>ASP.NET Core – modern backend development with C#.</p>
+      </div>
+      <div class="card">
+        <h3>Phase 3</h3>
+        <p>Apache Kafka – Event Streaming & Microservices.</p>
+      </div>
+      <div class="card">
+        <h3>Phase 4</h3>
+        <p>AI integrations & Observability – building intelligent, traceable systems.</p>
+      </div>
+      <div class="card">
+        <h3>Phase 5</h3>
+        <p>Azure Deployment & Certifications – cloud skills and official certifications.</p>
+      </div>
+    </div>
+
+    <footer>
+      <p>Connect with me: <a href="https://www.linkedin.com/in/tu-perfil" target="_blank">LinkedIn</a> | <a href="https://github.com/tuusuario" target="_blank">GitHub</a></p>
+    </footer>
+  </div>
 
 </body>
 </html>
