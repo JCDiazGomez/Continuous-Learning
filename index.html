@@ -8,50 +8,62 @@
     /* Reset básico */
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    /* Body y fondo principal */
+    /* Estilo general */
     body { 
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-      background: #1E1E2E;   /* Fondo gris oscuro */
-      color: #E0E0E0;         /* Texto principal gris claro */
-      line-height: 1.6; 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #F4F6FA;        /* Fondo gris muy claro */
+      color: #333;                /* Texto principal oscuro */
+      line-height: 1.6;
     }
 
-    /* Contenedor principal */
     .container { max-width: 1000px; margin: auto; padding: 40px 20px; }
 
     /* Encabezados */
-    h1 { font-size: 2.8em; color: #F0F0F0; margin-bottom: 10px; }
-    h2 { font-size: 2em; color: #F0F0F0; margin-top: 40px; margin-bottom: 20px; }
+    h1 { font-size: 2.8em; color: #0D47A1; margin-bottom: 10px; }
+    h2 { font-size: 2em; color: #1565C0; margin-top: 40px; margin-bottom: 20px; }
 
-    /* Secciones de tarjetas */
-    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+    /* Tarjetas */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
 
-    /* Tarjeta individual */
     .card {
-      background: #2A2A3D;    /* Tarjetas gris azulado */
-      color: #E0E0E0;         /* Texto claro */
+      background: #FFFFFF;       /* Blanco limpio */
+      color: #333;
       border-radius: 12px;
       padding: 20px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+      border: 1px solid #E0E0E0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
       transition: transform 0.3s, box-shadow 0.3s;
     }
+
     .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.5);
+      transform: translateY(-4px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.12);
     }
 
-    /* Títulos de tarjetas */
-    .card h3 { font-size: 1.4em; color: #1ABC9C; margin-bottom: 10px; }
+    /* Títulos dentro de las tarjetas */
+    .card h3 { font-size: 1.3em; color: #1976D2; margin-bottom: 10px; }
     .card p { margin-bottom: 8px; }
-    .card a { color: #E67E22; text-decoration: none; font-weight: bold; }
-    .card a:hover { color: #F1C40F; text-decoration: underline; }
+    .card a { color: #0078D7; text-decoration: none; font-weight: 600; }
+    .card a:hover { color: #004A99; text-decoration: underline; }
 
-    /* Footer / Contact */
-    footer { margin-top: 60px; text-align: center; font-size: 0.9em; color: #AAA; }
-    footer a { color: #1ABC9C; text-decoration: none; }
-    footer a:hover { color: #F1C40F; }
+    /* Footer */
+    footer { 
+      margin-top: 60px; 
+      text-align: center; 
+      font-size: 0.9em; 
+      color: #555; 
+      border-top: 1px solid #DDD;
+      padding-top: 20px;
+    }
 
-    /* Ajuste de enlaces generales */
+    footer a { color: #1976D2; text-decoration: none; }
+    footer a:hover { color: #004A99; }
+
+    /* Enlaces */
     a { transition: color 0.2s; }
   </style>
 </head>
@@ -85,6 +97,20 @@
       </div>
 
       <div class="card">
+        <h3>Entity Framework Core in ASP.NET Core</h3>
+        <p><strong>Provider:</strong> Udemy</p>
+        <p><strong>Date:</strong> October 2025</p>
+        <p><a href="https://www.udemy.com/certificate/UC-e46d6c62-ae69-4139-b577-e4e64c2dfb86/" target="_blank">View Certificate</a></p>
+      </div>
+
+      <div class="card">
+        <h3>LINQ en C# 10</h3>
+        <p><strong>Provider:</strong> Udemy</p>
+        <p><strong>Date:</strong> October 2025</p>
+        <p><a href="https://www.udemy.com/certificate/UC-97ea5778-b9df-42b2-9d7e-060dbdb4ccaf/" target="_blank">View Certificate</a></p>
+      </div>
+
+      <div class="card">
         <h3>Maersk Digital Badge: Security / Compliance / Skills</h3>
         <p><strong>Provider:</strong> Maersk / Skillsoft</p>
         <p><strong>Date:</strong> August 2025</p>
@@ -103,22 +129,6 @@
         <p><strong>Provider:</strong> Coursera</p>
         <p><strong>Date:</strong> June 27, 2025</p>
         <p><a href="https://www.coursera.org/account/accomplishments/verify/KAOUCZET42O7" target="_blank">Verify Certificate</a></p>
-      </div>
-
-      <!-- NUEVO CURSO -->
-      <div class="card">
-        <h3>LINQ en C# 10</h3>
-        <p><strong>Provider:</strong> Udemy</p>
-        <p><strong>Date:</strong> October 2025</p>
-        <p><a href="https://www.udemy.com/certificate/UC-97ea5778-b9df-42b2-9d7e-060dbdb4ccaf/" target="_blank">View Certificate</a></p>
-      </div>
-    </div>
-
-    <div class="card">
-        <h3>Entity FrameWork Core in ASP Net Core</h3>
-        <p><strong>Provider:</strong> Udemy</p>
-        <p><strong>Date:</strong> October 2025</p>
-        <p><a href="https://www.udemy.com/certificate/UC-e46d6c62-ae69-4139-b577-e4e64c2dfb86/" target="_blank">View Certificate</a></p>
       </div>
     </div>
 
