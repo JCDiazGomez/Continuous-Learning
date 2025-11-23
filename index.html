@@ -8,21 +8,18 @@
     /* Reset básico */
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    /* Estilo general */
     body { 
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #F4F6FA;        /* Fondo gris muy claro */
-      color: #333;                /* Texto principal oscuro */
+      background: #F4F6FA;
+      color: #333;
       line-height: 1.6;
     }
 
     .container { max-width: 1000px; margin: auto; padding: 40px 20px; }
 
-    /* Encabezados */
     h1 { font-size: 2.8em; color: #0D47A1; margin-bottom: 10px; }
     h2 { font-size: 2em; color: #1565C0; margin-top: 40px; margin-bottom: 20px; }
 
-    /* Tarjetas */
     .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -30,7 +27,7 @@
     }
 
     .card {
-      background: #FFFFFF;       /* Blanco limpio */
+      background: #FFFFFF;
       color: #333;
       border-radius: 12px;
       padding: 20px;
@@ -44,13 +41,11 @@
       box-shadow: 0 10px 20px rgba(0,0,0,0.12);
     }
 
-    /* Títulos dentro de las tarjetas */
     .card h3 { font-size: 1.3em; color: #1976D2; margin-bottom: 10px; }
     .card p { margin-bottom: 8px; }
     .card a { color: #0078D7; text-decoration: none; font-weight: 600; }
     .card a:hover { color: #004A99; text-decoration: underline; }
 
-    /* Footer */
     footer { 
       margin-top: 60px; 
       text-align: center; 
@@ -63,18 +58,20 @@
     footer a { color: #1976D2; text-decoration: none; }
     footer a:hover { color: #004A99; }
 
-    /* Enlaces */
     a { transition: color 0.2s; }
   </style>
 </head>
 <body>
 
   <div class="container">
+
     <h1>🛣️ Continuous Learning Portfolio</h1>
     <p>Tracking my continuous learning journey: certifications, courses, and professional development in technology, cloud, cybersecurity, and software development.</p>
 
+    <!-- COURSES -->
     <h2>🎓 Courses Completed</h2>
     <div class="cards">
+
       <div class="card">
         <h3>Online Cybersecurity and Privacy Course: VPN, Proxy, TOR</h3>
         <p><strong>Platform:</strong> Udemy</p>
@@ -130,16 +127,17 @@
         <p><strong>Date:</strong> June 27, 2025</p>
         <p><a href="https://www.coursera.org/account/accomplishments/verify/KAOUCZET42O7" target="_blank">Verify Certificate</a></p>
       </div>
-    </div>
 
-    <div class="card">
-        <h3>Prompt WebAPI Restful in ASP NET Core 8.0</h3>
-        <p><strong>Provider:</strong> Coursera</p>
+      <div class="card">
+        <h3>Prompt WebAPI Restful in ASP.NET Core 8.0</h3>
+        <p><strong>Provider:</strong> Udemy</p>
         <p><strong>Date:</strong> June 27, 2023</p>
-        <p><a href="https://www.udemy.com/certificate/UC-b8afefb9-dcf8-4acb-b6f3-6d47e029a5b3/" target="_blank">Verify Certificate</a></p>
+        <p><a href="https://www.udemy.com/certificate/UC-b8afefb9-dcf8-4acb-b6f3-6d47e029a5b3/" target="_blank">View Certificate</a></p>
       </div>
-    </div>
 
+    </div> <!-- end cards -->
+
+    <!-- ROADMAP -->
     <h2>📅 Learning Roadmap</h2>
     <div class="cards">
       <div class="card">
@@ -148,7 +146,7 @@
       </div>
       <div class="card">
         <h3>Phase 2</h3>
-        <p>ASP.NET Core – modern backend development with C#. GraphQL , CQRS</p>
+        <p>ASP.NET Core – modern backend development with C#. GraphQL, CQRS.</p>
       </div>
       <div class="card">
         <h3>Phase 3</h3>
@@ -165,8 +163,12 @@
     </div>
 
     <footer>
-      <p>Connect with me: <a href="https://www.linkedin.com/in/tu-perfil" target="_blank">LinkedIn</a> | <a href="https://github.com/tuusuario" target="_blank">GitHub</a></p>
+      <p>Connect with me: 
+        <a href="https://www.linkedin.com/in/tu-perfil" target="_blank">LinkedIn</a> | 
+        <a href="https://github.com/tuusuario" target="_blank">GitHub</a>
+      </p>
     </footer>
+
   </div>
 
 </body>
