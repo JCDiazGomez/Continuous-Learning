@@ -1,272 +1,359 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Continuous Learning Portfolio</title>
-  <style>
-    /* Reset básico */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Continuous Learning Portfolio</title>
 
-    body { 
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #F4F6FA;
-      color: #333;
-      line-height: 1.6;
-    }
+<style>
 
-    .container { max-width: 1000px; margin: auto; padding: 40px 20px; }
+/* RESET */
 
-    h1 { font-size: 2.8em; color: #0D47A1; margin-bottom: 10px; }
-    h2 { font-size: 2em; color: #1565C0; margin-top: 40px; margin-bottom: 20px; }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-    }
+/* LIGHT THEME */
 
-    .card {
-      background: #FFFFFF;
-      color: #333;
-      border-radius: 12px;
-      padding: 20px;
-      border: 1px solid #E0E0E0;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
+body{
+font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+background:#F4F6FA;
+color:#333;
+line-height:1.6;
+}
 
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.12);
-    }
+/* DARK MODE */
 
-    .card h3 { font-size: 1.3em; color: #1976D2; margin-bottom: 10px; }
-    .card p { margin-bottom: 8px; }
-    .card a { color: #0078D7; text-decoration: none; font-weight: 600; }
-    .card a:hover { color: #004A99; text-decoration: underline; }
+@media (prefers-color-scheme: dark){
 
-    footer { 
-      margin-top: 60px; 
-      text-align: center; 
-      font-size: 0.9em; 
-      color: #555; 
-      border-top: 1px solid #DDD;
-      padding-top: 20px;
-    }
+body{
+background:#121212;
+color:#EAEAEA;
+}
 
-    footer a { color: #1976D2; text-decoration: none; }
-    footer a:hover { color: #004A99; }
+.card{
+background:#1E1E1E;
+border:1px solid #333;
+}
 
-    a { transition: color 0.2s; }
-  </style>
+h1,h2{
+color:#90CAF9;
+}
+
+.card h3{
+color:#64B5F6;
+}
+
+}
+
+/* LAYOUT */
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:40px 20px;
+}
+
+h1{
+font-size:2.8em;
+color:#0D47A1;
+margin-bottom:10px;
+}
+
+h2{
+font-size:2em;
+color:#1565C0;
+margin-top:40px;
+margin-bottom:20px;
+}
+
+/* GRID */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+/* CARD */
+
+.card{
+background:#FFFFFF;
+border-radius:12px;
+padding:20px;
+border:1px solid #E0E0E0;
+box-shadow:0 4px 10px rgba(0,0,0,0.08);
+transition:transform .3s,box-shadow .3s;
+position:relative;
+}
+
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.card h3{
+font-size:1.3em;
+color:#1976D2;
+margin-bottom:10px;
+}
+
+.card p{
+margin-bottom:8px;
+}
+
+/* LINKS */
+
+.card a{
+color:#0078D7;
+text-decoration:none;
+font-weight:600;
+}
+
+.card a:hover{
+text-decoration:underline;
+}
+
+/* BADGES */
+
+.badges{
+margin-top:10px;
+}
+
+.badge{
+display:inline-block;
+background:#E3F2FD;
+color:#0D47A1;
+padding:4px 8px;
+border-radius:6px;
+font-size:0.8em;
+margin:3px;
+}
+
+/* ROADMAP PROGRESS BAR */
+
+.progress-container{
+background:#E0E0E0;
+border-radius:10px;
+overflow:hidden;
+height:16px;
+margin-bottom:30px;
+}
+
+.progress-bar{
+height:16px;
+width:50%;
+background:linear-gradient(90deg,#1976D2,#42A5F5);
+}
+
+/* COMPLETED PHASE */
+
+.completed{
+border:2px solid #2E7D32;
+background:#F1F8E9;
+}
+
+.completed::after{
+content:"✓";
+position:absolute;
+top:10px;
+right:15px;
+font-size:2.8em;
+color:#2E7D32;
+font-weight:bold;
+}
+
+/* FOOTER */
+
+footer{
+margin-top:60px;
+text-align:center;
+font-size:.9em;
+color:#666;
+border-top:1px solid #DDD;
+padding-top:20px;
+}
+
+</style>
+
 </head>
+
 <body>
 
-  <div class="container">
+<div class="container">
 
-    <h1>🛣️ Continuous Learning Portfolio</h1>
-    <p>Tracking my continuous learning journey: certifications, courses, and professional development in technology, cloud, cybersecurity, and software development.</p>
+<h1>🛣️ Continuous Learning Portfolio</h1>
 
-    <!-- COURSES -->
-    <h2>🎓 Courses Completed</h2>
-    <div class="cards">
+<p>
+Tracking my continuous learning journey: certifications, projects and professional development in software engineering, cloud, cybersecurity and AI systems.
+</p>
 
-      <div class="card">
-        <h3>Online Cybersecurity and Privacy Course: VPN, Proxy, TOR</h3>
-        <p><strong>Platform:</strong> Udemy</p>
-        <p><strong>Date:</strong> May 31, 2025</p>
-        <p><a href="https://www.udemy.com/certificate/UC-13c06416-4133-4720-be02-3fde83f8218a/" target="_blank" rel="noopener noreferrer">View Certificate</a></p>
-      </div>
+<!-- COURSES -->
 
-      <div class="card">
-        <h3>Git + GitHub</h3>
-        <p><strong>Platform:</strong> Udemy</p>
-        <p><strong>Date:</strong> June 2025</p>
-        <p><a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-03fd1f06-8f02-4519-9a07-3968db52e368.pdf" target="_blank" rel="noopener noreferrer">View Certificate</a></p>
-      </div>
+<h2>🎓 Courses Completed</h2>
 
-      <div class="card">
-        <h3>Clean Architecture in ASP.NET Core</h3>
-        <p><strong>Platform:</strong> Udemy</p>
-        <p><strong>Date:</strong> September 2025</p>
-        <p><a href="https://www.udemy.com/certificate/UC-a090d962-6ddc-4295-b8de-54fc7d61cdf8/" target="_blank" rel="noopener noreferrer">View Certificate</a></p>
-      </div>
+<div class="cards">
 
-      <div class="card">
-        <h3>Entity Framework Core in ASP.NET Core</h3>
-        <p><strong>Provider:</strong> Udemy</p>
-        <p><strong>Date:</strong> October 2025</p>
-        <p><a href="https://www.udemy.com/certificate/UC-e46d6c62-ae69-4139-b577-e4e64c2dfb86/" target="_blank" rel="noopener noreferrer">View Certificate</a></p>
-      </div>
+<div class="card">
 
-      <div class="card">
-        <h3>LINQ en C# 10</h3>
-        <p><strong>Provider:</strong> Udemy</p>
-        <p><strong>Date:</strong> October 2025</p>
-        <p><a href="https://www.udemy.com/certificate/UC-97ea5778-b9df-42b2-9d7e-060dbdb4ccaf/" target="_blank" rel="noopener noreferrer">View Certificate</a></p>
-      </div>
+<h3>Clean Architecture in ASP.NET Core</h3>
 
-      <div class="card">
-        <h3>Artificial Intelligence and Machine Learning</h3>
-        <p><strong>Provider:</strong> Maersk / Skillsoft</p>
-        <p><strong>Date:</strong> August 2025</p>
-        <p><a href="https://maersk.digitalbadges-eu.skillsoft.com/f7322b81-75a7-4e01-bd10-e9c31e4fea16#acc.LH4bJ2Sx" target="_blank" rel="noopener noreferrer">View Credential</a></p>
-      </div>
+<p><strong>Platform:</strong> Udemy</p>
+<p><strong>Date:</strong> September 2025</p>
 
-      <div class="card">
-        <h3>Generative AI: Prompt Engineering Basics</h3>
-        <p><strong>Provider:</strong> IBM / Coursera</p>
-        <p><strong>Date:</strong> August 2025</p>
-        <p><a href="https://www.coursera.org/account/accomplishments/verify/EHMVR3MWBL8J" target="_blank" rel="noopener noreferrer">Verify Certificate</a></p>
-      </div>
+<div class="badges">
+<span class="badge">.NET</span>
+<span class="badge">Architecture</span>
+<span class="badge">Backend</span>
+</div>
 
-      <div class="card">
-        <h3>MCP Protocol</h3>
-        <p><strong>Provider:</strong> Udemy</p>
-        <p><strong>Date:</strong> January 2026</p>
-        <p><a href="https://www.udemy.com/certificate/UC-10d2c72a-e664-44d3-8618-b769a5a66af5/" target="_blank" rel="noopener noreferrer">Verify Certificate</a></p>
-      </div>
+</div>
 
-      <div class="card">
-        <h3>Prompt Engineering for ChatGPT</h3>
-        <p><strong>Provider:</strong> Coursera</p>
-        <p><strong>Date:</strong> June 27, 2025</p>
-        <p><a href="https://www.coursera.org/account/accomplishments/verify/KAOUCZET42O7" target="_blank" rel="noopener noreferrer">Verify Certificate</a></p>
-      </div>
+<div class="card">
 
-      <div class="card">
-        <h3>WebAPI Restful in ASP.NET Core 8.0</h3>
-        <p><strong>Provider:</strong> Udemy</p>
-        <p><strong>Date:</strong> June 27, 2023</p>
-        <p><a href="https://www.udemy.com/certificate/UC-b8afefb9-dcf8-4acb-b6f3-6d47e029a5b3/" target="_blank" rel="noopener noreferrer">View Certificate</a></p>
-      </div>
+<h3>Entity Framework Core in ASP.NET Core</h3>
 
-    </div> <!-- end cards -->
+<p><strong>Platform:</strong> Udemy</p>
+<p><strong>Date:</strong> October 2025</p>
 
-      <!-- PROJECTS -->
-    <h2>🛠️ Projects</h2>
-    <div class="cards">
+<div class="badges">
+<span class="badge">.NET</span>
+<span class="badge">EF Core</span>
+<span class="badge">SQL</span>
+</div>
 
-          <div class="card">
-        <h3>MCP Server and MCP Client self created</h3>
-        <p>
-          Custom MCP Server and Client built to manage Gmail using the MCP protocol over OpenAI LLM.
-          Focused on experimentation with FastMCP and How MCP server is connected to a MCP client connected with LLM
-        </p>
-        <p>
-          <a href="https://github.com/JCDiazGomez/gmail-mcp-cliet-server-fastmcp-project" target="_blank" rel="noopener noreferrer">
-            View on GitHub
-          </a>
-        </p>
-      </div>
+</div>
 
-      <div class="card">
-        <h3>MCP Server for SQLite (STDIO)</h3>
-        <p>
-          Custom MCP Server built to manage a SQLite database using the MCP protocol over STDIO.
-          Focused on experimentation with FastMCP and MCP Inspector, as well as analyzing security
-          risks when exposing MCP servers remotely.
-        </p>
-        <p>
-          Security-oriented design: query validation, protection against SQL injection,
-          and blocking of destructive operations (INSERT, UPDATE, DELETE, DROP).
-        </p>
-        <p>
-          <a href="https://github.com/Nuchie-Bravura/MCP_Server_SQLite" target="_blank">
-            View on GitHub
-          </a>
-        </p>
-      </div>
+<div class="card">
 
-      <div class="card">
-        <h3>The Cool Library – Repository Pattern</h3>
-        <p>
-          Learning-focused .NET project implementing Clean Architecture principles
-          with the Repository Pattern as a foundation for scalable and maintainable systems.
-        </p>
-        <p>
-          Designed as an evolving codebase to later incorporate CQRS, GraphQL, security,
-          event-driven architecture, observability, and cloud deployment.
-        </p>
-        <p>
-          <a href="https://github.com/Nuchie-Bravura/TheCoolLibrary_RepositoryPattern" target="_blank">
-            View on GitHub
-          </a>
-        </p>
-      </div>
+<h3>Generative AI: Prompt Engineering Basics</h3>
 
-       <div class="card">
-        <h3>The Cool Library – CQRS Pattern</h3>
-        <p>
-          Learning-focused .NET project implementing Clean Architecture principles
-          with the CQRS Pattern as a foundation for scalable and maintainable systems.
-        </p>
-        <p>
-          evolving codebase to incorporate CQRS,
-          event-driven architecture, observability, and cloud deployment.
-        </p>
-        <p>
-          <a href="https://github.com/Nuchie-Bravura/TheCoolLibrary_CQRS_Pattern.git" target="_blank" rel="noopener noreferrer">
-            View on GitHub
-          </a>
-        </p>
-      </div>
+<p><strong>Provider:</strong> IBM / Coursera</p>
+<p><strong>Date:</strong> August 2025</p>
 
-      <div class="card">
-        <h3>Claude Integrator Library</h3>
-        <p>
-          .NET library designed to integrate Claude as an AI agent within backend systems,
-          enabling structured prompts, tool usage, and controlled AI-assisted workflows.
-        </p>
-        <p>
-          Intended to be embedded into larger architectures (APIs, event-driven systems),
-          aligning AI capabilities with clean architecture, security, and observability practices.
-        </p>
-        <p>
-          <a href="https://github.com/Nuchie-Bravura/ClaudeIntegratorLibraryJCdiaz" target="_blank" rel="noopener noreferrer">
-            View on GitHub
-          </a>
-        </p>
-      </div>
+<div class="badges">
+<span class="badge">AI</span>
+<span class="badge">Prompt Engineering</span>
+</div>
 
-    </div>
+</div>
 
+<div class="card">
 
+<h3>MCP Protocol</h3>
 
-    <!-- ROADMAP -->
-    <h2>📅 Learning Roadmap</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Phase 1</h3>
-        <p>MCP  & Cybersecurity – solid foundation in networking and security.</p>
-      </div>
-      <div class="card">
-        <h3>Phase 2</h3>
-        <p>ASP.NET Core – modern backend development with C#. GraphQL, CQRS.</p>
-      </div>
-      <div class="card">
-        <h3>Phase 3</h3>
-        <p>Apache Kafka – Event Streaming & Microservices.</p>
-      </div>
-      <div class="card">
-        <h3>Phase 4</h3>
-        <p>AI integrations & Observability – building intelligent, traceable systems.</p>
-      </div>
-      <div class="card">
-        <h3>Phase 5</h3>
-        <p>Azure Deployment & Certifications – cloud skills and official certifications.</p>
-      </div>
-    </div>
+<p><strong>Provider:</strong> Udemy</p>
+<p><strong>Date:</strong> January 2026</p>
 
-    <footer>
-      <p>Connect with me: 
-        <a href="https://www.linkedin.com/in/juan-carlos-d%C3%ADaz-g%C3%B3mez-4b040448/" target="_blank" rel="noopener noreferrer">LinkedIn</a> | 
-        <a href="https://github.com/tuusuario" target="_blank">GitHub</a>
-      </p>
-    </footer>
+<div class="badges">
+<span class="badge">AI Agents</span>
+<span class="badge">MCP</span>
+</div>
 
-  </div>
+</div>
+
+</div>
+
+<!-- PROJECTS -->
+
+<h2>🛠️ Projects</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>The Cool Library – CQRS</h3>
+
+<p>
+Learning-focused .NET backend implementing Clean Architecture and CQRS patterns.
+</p>
+
+<div class="badges">
+<span class="badge">.NET</span>
+<span class="badge">CQRS</span>
+<span class="badge">Clean Architecture</span>
+</div>
+
+</div>
+
+<div class="card">
+
+<h3>Claude Integrator Library</h3>
+
+<p>
+.NET library integrating Claude as an AI agent for backend workflows.
+</p>
+
+<div class="badges">
+<span class="badge">AI</span>
+<span class="badge">Agents</span>
+<span class="badge">.NET</span>
+</div>
+
+</div>
+
+</div>
+
+<!-- ROADMAP -->
+
+<h2>📅 Learning Roadmap</h2>
+
+<div class="progress-container">
+<div class="progress-bar"></div>
+</div>
+
+<div class="cards">
+
+<div class="card completed">
+<h3>Phase 1</h3>
+<p>MCP & Cybersecurity foundations.</p>
+</div>
+
+<div class="card completed">
+<h3>Phase 2</h3>
+<p>ASP.NET Core – Backend architecture, CQRS, GraphQL.</p>
+</div>
+
+<div class="card completed">
+<h3>Phase 3</h3>
+<p>Apache Kafka – Event Streaming & Microservices.</p>
+</div>
+
+<div class="card">
+<h3>Phase 4</h3>
+<p>AI integrations & Observability.</p>
+</div>
+
+<div class="card">
+<h3>Phase 5</h3>
+<p>Azure Deployment & Certifications.</p>
+</div>
+
+<div class="card">
+<h3>Phase 6</h3>
+<p>NoSQL – Improve skills with distributed databases and scalable data architectures.</p>
+</div>
+
+</div>
+
+<footer>
+
+<p>
+
+Connect with me
+
+<br><br>
+
+<a href="https://github.com/Nuchie-Bravura">GitHub</a> | <a href="https://www.linkedin.com/">LinkedIn</a>
+
+</p>
+
+</footer>
+
+</div>
 
 </body>
 </html>
